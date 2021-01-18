@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blaze</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "inter-font" %>
+    <%= stylesheet_link_tag "tailwind" %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= yield :head %>
+    <%= javascript_include_tag "turbo", type: "module" %>
+  </head>
+  <body>
+    <%= render "shared/top_nav" %>
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <%= yield %>
+    </div>
+  </body>
+</html>
